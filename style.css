@@ -1,0 +1,55 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width: 300px;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+input[type=radio]{
+  display: none;
+}
+.slide{
+  width: 900px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  font-size: 0;
+  transition: .5s;
+}
+.btn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+label{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[id=s1]:checked ~ .btn label[for=s1]{
+  background-color: crimson;
+}
+input[id=s2]:checked ~ .btn label[for=s2]{
+  background-color: crimson;
+}
+input[id=s3]:checked ~ .btn label[for=s3]{
+  background-color: crimson;
+}
+input[id=s1]:checked ~ .slide{
+  left: 0;
+}
+input[id=s2]:checked ~ .slide{
+  left: -300px;
+}
+input[id=s3]:checked ~ .slide{
+  left: -600px;
+}
